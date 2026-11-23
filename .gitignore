@@ -1,31 +1,45 @@
-# Node / Angular
-**/node_modules/
-**/dist/
-**/.angular/
-**/coverage/
-*.tsbuildinfo
 
-# Java / Maven
-**/target/
-*.class
-*.jar
-*.war
+# Dependencies
+/node_modules/
+
+# Build output
+/dist/
+/tmp/
+/out-tsc/
+/.angular/
+/coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 *.log
 
-# IDE / OS
-.idea/
-.vscode/
-*.iml
-.classpath
-.project
-.settings/
-.DS_Store
-Thumbs.db
-
-# Local settings and dev database
+# Environment variables and secrets
 .env
 .env.*
 !.env.example
-backend/data/
-backend/*.mv.db
-backend/*.trace.db
+!.env.template
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Test output
+/test-results/
+/playwright-report/
