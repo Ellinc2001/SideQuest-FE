@@ -1,0 +1,59 @@
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="SideQuest - Home">
+      <span class="brand-icon">S</span>
+      <span>SideQuest</span>
+    </a>
+    <span class="pill">Starter • INGSW 2026/2027</span>
+  </header>
+
+  <main class="content">
+    <p class="eyebrow">PROGETTO INIZIALIZZATO</p>
+    <h1>Pronto per la tua <span>prossima missione.</span></h1>
+    <p class="subtitle">
+      Angular e Spring Boot sono pronti. Da qui inizieremo a costruire la piattaforma
+      SideQuest seguendo i requisiti e i diagrammi del progetto.
+    </p>
+
+    <section class="status-panel" aria-label="Stato collegamento con il back-end">
+      <div class="status-header">
+        <div>
+          <p class="label">COLLEGAMENTO API</p>
+          <h2>Stato del back-end</h2>
+        </div>
+        <button type="button" (click)="refreshHealth()" [disabled]="loading()">Ricarica</button>
+      </div>
+
+      @if (loading()) {
+        <p class="state">Verifica della connessione...</p>
+      } @else if (health(); as response) {
+        <p class="state success"><span class="dot"></span> API {{ response.status }} — {{ response.application }}</p>
+        <p class="detail">GET /api/health • {{ response.timestamp }}</p>
+      } @else {
+        <p class="state failure"><span class="dot"></span> {{ error() }}</p>
+      }
+    </section>
+
+    <section class="next-steps" aria-label="Struttura iniziale">
+      <h2>Da qui partiamo</h2>
+      <div class="cards">
+        <article>
+          <div class="number">01</div>
+          <h3>Analisi requisiti</h3>
+          <p>Partiamo dal nucleo R01–R06 e dal pacchetto che verrà assegnato.</p>
+        </article>
+        <article>
+          <div class="number">02</div>
+          <h3>Architettura</h3>
+          <p>Separeremo componenti Angular, servizi Spring Boot e persistenza.</p>
+        </article>
+        <article>
+          <div class="number">03</div>
+          <h3>Testing e UML</h3>
+          <p>Documenteremo le scelte di design e testeremo il comportamento.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>SideQuest • Starter per l'esame di Ingegneria del Software</footer>
+</div>

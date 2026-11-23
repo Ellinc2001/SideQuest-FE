@@ -1,0 +1,31 @@
+# Node / Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+*.tsbuildinfo
+
+# Java / Maven
+**/target/
+*.class
+*.jar
+*.war
+*.log
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+
+# Local settings and dev database
+.env
+.env.*
+!.env.example
+backend/data/
+backend/*.mv.db
+backend/*.trace.db
